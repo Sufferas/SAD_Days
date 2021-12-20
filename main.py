@@ -2,6 +2,9 @@
 
 # Press Umschalt+F10 to execute it or replace it with your code.
 # Press Double Shift to search everywhere for classes, files, tool windows, actions, and settings.
+from Day_3 import day_3
+
+
 def day_2_2(name):
     with open(name) as f:
         contents = f.readlines()
@@ -90,9 +93,9 @@ def day_1(name):
 
 # Press the green button in the gutter to run the script.
 if __name__ == '__main__':
-    day_1('input.txt')
+    # day_1('input.txt')
     # day_2('input2.txt')
     # day_2_2('input2.txt')
-    # day_3('input3.txt')
+    day_3('input3.txt')
 
 # See PyCharm help at https://www.jetbrains.com/help/pycharm/
