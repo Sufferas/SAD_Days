@@ -6,7 +6,6 @@ def day_2_2(name):
     with open(name) as f:
         contents = f.readlines()
 
-
     down = 'down'
     down_num = 0
     up = 'up'
@@ -60,7 +59,7 @@ def day_2(name):
 
 
 def day_1(name):
-    # Use a breakpoint in the code line below to debug your script.
+    # part 1
     with open(name) as f:
         contents = f.readlines()
     count = 0
@@ -69,14 +68,31 @@ def day_1(name):
         if num < int(content):
             count = count + 1
         num = int(content)
-    print(count-1)
+    print(count - 1)
+
+    # part 2
+    with open(name) as f:
+        contents = f.readlines()
+    count = 0
+    contents_len = len(contents)
+    for i in range(contents_len-3):
+        curr = int(contents[i]) + int(contents[i + 1]) + int(contents[i + 2])
+
+        prev = int(contents[i + 1]) + int(contents[i+2]) + int(contents[i + 3])
+        if (curr < prev):
+            count += 1
+
+    print(count)
+
+
+
 
 
 # Press the green button in the gutter to run the script.
 if __name__ == '__main__':
-    # day_1('input.txt')
+    day_1('input.txt')
     # day_2('input2.txt')
-    day_2_2('input2.txt')
+    # day_2_2('input2.txt')
     # day_3('input3.txt')
 
 # See PyCharm help at https://www.jetbrains.com/help/pycharm/
